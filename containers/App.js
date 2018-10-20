@@ -8,14 +8,18 @@ import WidgetExpedition from './../components/WidgetExpedition/index.jsx';
 import WidgetCrew from './../components/WidgetCrew/index.jsx';
 import WidgetLaunch from './../components/WidgetLaunch/index.jsx';
 import myData from 'data/data.js';
+import Rocket from './../components/Artwork/Rocket/index.jsx';
 
 const AppViewStyled = styled.div`
   background-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);
-  border: 1px solid red;
 `
 const AppViewContainerStyled = styled.div`
-min-height: calc(100vh - 90px);
-border: 1px solid blue;
+  min-height: calc(100vh - 70px);
+`
+const RocketStyled = styled.div`
+  position: absolute;
+  left: 0;
+  bottom: 0;
 `
 
 class App extends Component {
@@ -58,7 +62,9 @@ class App extends Component {
                   launchWindow={launchWindow || 'TBC'} />
               </div>
             }
+            <RocketStyled><Rocket /></RocketStyled>
           </Main>
+
         </AppViewContainerStyled>
         <Footer />
       </AppViewStyled>
