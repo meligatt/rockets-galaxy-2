@@ -8,13 +8,23 @@ const WidgetCrewStyled = styled.div`
   color: black;
 `
 const WidgetCrew = ({
-  crew
+  crew,
+  crewed,
+  onClickCrewMember,
 }) => {
+  if (!crewed) {
+    return (<WidgetCrewStyled>No crew</WidgetCrewStyled>);
+  }
   return (
     <WidgetCrewStyled>
       <h4>Crew</h4>
       {
-        crew.map(item => <div key={item.name}>{item.name}</div>)
+        crewed && crew.map(item => {
+          return (<div id={item.name} key={item.name} onClick={onClickCrewMember}>
+            <div> {item.name}</div>
+            <img width="100" src={item.avatar} />
+          </div>)
+        })
       }
     </WidgetCrewStyled>
   );
