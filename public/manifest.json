@@ -1,9 +1,19 @@
 {
   "manifest_version": 2,
 
-  "name": "My Extension",
-  "description": "This extension is a starting point to create a real Chrome extension",
+  "name": "Rockets of the Galaxy",
+  "description": "This extension shows you when is the next Rocket Launches and Landings",
   "version": "0.0.1",
+  "default_locale": "en",
+  "author": "Team Wangalen",
+  "homepage_url": "https://2018.spaceappschallenge.org/challenges/can-you-build/when-next-rocket-launch/teams/wangalen/project",
+  "background": {
+    "scripts": [
+      "bundle.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
   "icons": {
     "16": "logo-rocket.png",
     "48": "logo-rocket.png",
@@ -11,9 +21,5 @@
   },
   "chrome_url_overrides": {
     "newtab": "index.html"
-  },
-  "content_scripts": [{
-    "matches": ["http://*/*", "https://*/*"],
-    "js": ["bundle.js"]
-  }]
+  }
 }
