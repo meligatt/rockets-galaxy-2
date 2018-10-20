@@ -8,6 +8,7 @@ import WidgetExpedition from './../components/WidgetExpedition/index.jsx';
 import WidgetCrew from './../components/WidgetCrew/index.jsx';
 import WidgetCrewMember from './../components/WidgetCrewMember/index.jsx';
 import WidgetLaunch from './../components/WidgetLaunch/index.jsx';
+import WidgetTimeline from './../components/WidgetTimeline/index.jsx';
 import myData from 'data/data.js';
 import Rocket from './../components/Artwork/Rocket/index.jsx';
 
@@ -56,7 +57,7 @@ class App extends Component {
   }
 
   render() {
-    const { isLoading, randomMission, selectedCrewMember } = this.state;
+    const { isLoading, randomMission, selectedCrewMember, data } = this.state;
     const {
       launchDate,
       launchMonth,
@@ -89,7 +90,7 @@ class App extends Component {
                 {selectedCrewMember && <WidgetCrewMember data={randomMission.crew.filter(item => item.name === selectedCrewMember)} />}
               </WidgetArea>
             }
-
+            {!isLoading && <WidgetTimeline data={data} currentRandomMission={randomMission} />}
           </Main>
           {/* <RocketStyled><Rocket /></RocketStyled> */}
         </AppViewContainerStyled>
