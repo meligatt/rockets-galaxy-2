@@ -1,0 +1,42 @@
+// @import 'src/styles/abstracts/functions/_get-color';
+.main-nav {
+  .main-nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 0 20px;
+  }
+  .main-nav__logo {
+    display: inline-block;
+    border: 2px solid rgba($color: #FFFFFF, $alpha: 0.5);
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+  .main-nav__menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 20%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .main-nav__item {
+    flex: 1 0 calc(25% - 10px);
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    a {
+      color: black;
+      text-transform: none;
+      letter-spacing: normal;
+      transition: color .2s ease-in;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
