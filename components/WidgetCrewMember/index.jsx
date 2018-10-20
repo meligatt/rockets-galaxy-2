@@ -7,6 +7,13 @@ const WidgetCrewMemberStyled = styled.div`
   margin: 1rem;
   color: black;
 `
+
+const ContentStyled = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
+  flex-wrap: wrap;
+`
 const WidgetCrewMember = ({
   data
 }) => {
@@ -20,16 +27,22 @@ const WidgetCrewMember = ({
   return (
     <WidgetCrewMemberStyled>
       <h4>Crew Member</h4>
-      <div>name: {name}</div>
-      <div>avatar: <img width="100" src={avatar} /></div>
-      <div>Profile: <a href={{ link }}>{link}</a></div>
-      <div>
-        <h5>Social media</h5>
-        <div>twitter: {social.twitter}</div>
-        <div>facebook: {social.facebook}</div>
-        <div>flickr: {social.flickr}</div>
-        <div>instagram: {social.instagram}</div>
-      </div>
+      <ContentStyled>
+        <img height="200" width="auto" src={avatar} style={{ margin: '0 10px' }} />
+        <div>
+          <div>name: {name}</div>
+          <div>Profile: <a href={link}>{link}</a></div>
+          <div>
+            <h5>Social media</h5>
+            <div>twitter: {social.twitter}</div>
+            <div>facebook: {social.facebook}</div>
+            <div>flickr: {social.flickr}</div>
+            <div>instagram: {social.instagram}</div>
+          </div>
+        </div>
+      </ContentStyled>
+
+
     </WidgetCrewMemberStyled >
   );
 };

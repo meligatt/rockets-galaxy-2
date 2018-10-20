@@ -22,6 +22,10 @@ const RocketStyled = styled.div`
   left: 0;
   bottom: 0;
 `
+const WidgetArea = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
 
 class App extends Component {
   constructor(props) {
@@ -71,7 +75,7 @@ class App extends Component {
           <Nav />
           <Main>
             {!isLoading &&
-              <div className="Widget-area">
+              <WidgetArea>
                 <WidgetExpedition
                   mission={mission}
                   description={description}
@@ -82,13 +86,12 @@ class App extends Component {
                   launchYear={launchYear}
                   launchWindow={launchWindow || 'TBD'} />
                 <WidgetCrew crew={crew} crewed={crewed} onClickCrewMember={this.onClickCrewMember} />
-
                 {selectedCrewMember && <WidgetCrewMember data={randomMission.crew.filter(item => item.name === selectedCrewMember)} />}
-              </div>
+              </WidgetArea>
             }
-            {/* <RocketStyled><Rocket /></RocketStyled> */}
-          </Main>
 
+          </Main>
+          {/* <RocketStyled><Rocket /></RocketStyled> */}
         </AppViewContainerStyled>
         <Footer />
       </AppViewStyled>

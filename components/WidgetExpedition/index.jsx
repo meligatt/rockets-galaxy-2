@@ -6,6 +6,7 @@ const WidgetExpeditionStyled = styled.div`
   padding: 1rem;
   margin: 1rem;
   color: black;
+  flex: 1 1 20em;  
 `
 const WidgetExpedition = ({
   mission,
