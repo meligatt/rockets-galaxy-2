@@ -1,5 +1,4 @@
-const data = [
-  {
+const data = [{
     launchMonth: "October",
     launchYear: "2018",
     timezone: "Eastern",
@@ -10,8 +9,7 @@ const data = [
     mission: "ICON (Ionospheric Connection Explorer)",
     description: "The Ionospheric Connection Explorer will study the frontier of space: the dynamic zone high in our atmosphere where Earth weather and space weather meet. ICON will launch from Cape Canaveral Air Force Station in Florida aboard an Northrop Grumman Pegasus XL rocket.",
     crewed: false,
-    crew: [
-    ],
+    crew: [],
   },
   {
     launchMonth: "November",
@@ -24,8 +22,7 @@ const data = [
     mission: "Northrop Grumman Resupply Mission to Space Station (CRS-10)",
     description: "Northrop Grumman\'s tenth contracted commercial resupply services mission, launching aboard an Antares rocket from Wallops Flight Facility in Virginia, will deliver several tons of cargo including crew supplies and science experiments to the International Space Station.",
     crewed: false,
-    crew: [
-    ],
+    crew: [],
   },
   {
     launchMonth: "November",
@@ -38,8 +35,7 @@ const data = [
     mission: "InSight Landing on Mars",
     description: "The Entry, Descent and Landing phase is the final plunge of the Mars InSight Lander through the Martian atmosphere. It lasts about six minutes and delivers the lander safely to the surface of the Red Planet.",
     crewed: false,
-    crew: [
-    ],
+    crew: [],
   },
   {
     launchMonth: "December",
@@ -52,10 +48,10 @@ const data = [
     mission: "Expedition 57 Landing",
     description: "Astronauts Serena Auñón-Chancellor of NASA, Alexander Gerst of the European Space Agency (ESA), and cosmonaut Sergey Prokopyev of the Russian space agency Roscosmos, will undock their Soyuz spacecraft from the International Space Station and land in Kazakhstan.",
     crewed: true,
-    crew: [
-      {
+    crew: [{
         name: "Commander Alexander Gerst",
         link: "http://alexandergerst.esa.int/",
+        avatar: "http://alexandergerst.esa.int/img/cover_alexandergerst_.jpg",
         social: {
           twitter: "https://twitter.com/astro_alex",
           facebook: "https://www.facebook.com/ESAAlexGerst",
@@ -66,6 +62,7 @@ const data = [
       {
         name: "Serena Auñón-Chancellor",
         link: "https://www.nasa.gov/astronauts/biographies/serena-m-aunon-chancellor",
+        avatar: "https://www.nasa.gov/sites/default/files/styles/side_image/public/thumbnails/image/jsc2018e038857.jpg?itok=d834nLF7",
         social: {
           twitter: "https://twitter.com/AstroSerena",
           facebook: "",
@@ -76,6 +73,7 @@ const data = [
       {
         name: "Sergey Prokopyev",
         link: "https://en.wikipedia.org/wiki/Sergey_Prokopyev_(cosmonaut)",
+        avatar: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Sergey_Prokopyev_-_NASA_portrait.jpg/400px-Sergey_Prokopyev_-_NASA_portrait.jpg",
         social: {
           twitter: "",
           facebook: "",
@@ -96,10 +94,10 @@ const data = [
     mission: "Expedition 58 Launch",
     description: "NASA astronaut Anne McClain, Canadian Space Agency astronaut David Saint-Jacques and Oleg Kononenko of the Russian space agency Roscosmos launch to the International Space Station aboard the Russian Soyuz spacecraft from the Baikonur Cosmodrome in Kazakhstan.",
     crewed: true,
-    crew: [
-      {
+    crew: [{
         name: "Oleg Kononenko",
         link: "https://www.jsc.nasa.gov/Bios/htmlbios/kononenko.html",
+        avatar: "https://www.jsc.nasa.gov/Bios/portraits/kononenko-thumbnail.jpg",
         social: {
           twitter: "",
           facebook: "",
@@ -110,6 +108,7 @@ const data = [
       {
         name: "David Saint-Jacques",
         link: "http://www.asc-csa.gc.ca/eng/astronauts/canadian/active/bio-david-saint-jacques.asp",
+        avatar: "https://pbs.twimg.com/profile_images/1009508538362802178/UNgVvAdK_400x400.jpg",
         social: {
           twitter: "http://twitter.com/Astro_DavidS",
           facebook: "https://www.facebook.com/AstroDavidS",
@@ -120,6 +119,7 @@ const data = [
       {
         name: "Anne McClain",
         link: "https://www.nasa.gov/astronauts/biographies/anne-c-mcclain",
+        avatar: "https://www.nasa.gov/sites/default/files/styles/side_image/public/thumbnails/image/mcclain.jpg?itok=xSUucYbl",
         social: {
           twitter: "https://twitter.com/AstroAnnimal",
           facebook: "",
@@ -140,8 +140,7 @@ const data = [
     mission: "Commercial Crew SpaceX Demonstration Mission 1 (Uncrewed)",
     description: "NASA and industry partners are targeting the return of human spaceflight from Florida’s Space Coast. These flight tests will prove the space systems meet NASA’s requirements for certification to carry astronauts to and from the International Space Station. For this uncrewed flight test, SpaceX's Crew Dragon spacecraft will launch on a Falcon 9 rocket from Space Launch Complex 39A at Kennedy Space Center.",
     crewed: false,
-    crew: [
-    ],
+    crew: [],
   },
   {
     launchMonth: "March",
@@ -154,8 +153,7 @@ const data = [
     mission: "Commercial Crew Boeing Orbital Flight Test (Uncrewed)",
     description: "NASA and industry partners are targeting the return of human spaceflight from Florida’s Space Coast. These flight tests will prove the space systems meet NASA’s requirements for certification to carry astronauts to and from the International Space Station. For this uncrewed flight test, Boeing’s Starliner spacecraft will launch on a United Launch Alliance Atlas V rocket from Space Launch Complex 41 at Cape Canaveral Air Force Station.",
     crewed: false,
-    crew: [
-    ],
+    crew: [],
   },
   {
     launchMonth: "June",
@@ -168,10 +166,10 @@ const data = [
     mission: "Commercial Crew SpaceX Demonstration Mission 2 (Crewed)",
     description: "NASA astronauts Bob Behnken and Doug Hurley are training to fly on SpaceX’s Crew Dragon Demo-2 mission, with a planning date of June 2019.",
     crewed: true,
-    crew: [
-      {
+    crew: [{
         name: "Bob Behnken",
         link: "https://www.nasa.gov/astronauts/biographies/robert-l-behnken",
+        avatar: "https://www.nasa.gov/sites/default/files/styles/side_image/public/thumbnails/image/9371018002_626f81d665_o.jpg?itok=NbCgk3FC",
         social: {
           twitter: "https://twitter.com/AstroBehnken",
           facebook: "",
@@ -182,6 +180,7 @@ const data = [
       {
         name: "Doug Hurley",
         link: "https://www.nasa.gov/astronauts/biographies/douglas-g-hurley",
+        avatar: "https://www.nasa.gov/sites/default/files/styles/side_image/public/thumbnails/image/9391325359_bb7f05ec52_o.jpg?itok=Di1JzoZB",
         social: {
           twitter: "https://twitter.com/Astro_Doug",
           facebook: "",
@@ -202,10 +201,10 @@ const data = [
     mission: "Commercial Crew Boeing Crew Flight Test (Crewed): Mid 2019",
     description: "NASA astronauts Eric Boe and Nicole Aunapu Mann and Boeing astronaut Chris Ferguson are slated for Boeing’s Crew Flight Test targeted for August 2019.",
     crewed: true,
-    crew: [
-      {
+    crew: [{
         name: "Eric Boe",
         link: "https://www.nasa.gov/astronauts/biographies/eric-a-boe",
+        avatar: "https://www.nasa.gov/sites/default/files/styles/side_image/public/thumbnails/image/boe_eric_a.jpg?itok=5apW00_Y",
         social: {
           twitter: "https://twitter.com/NASA_Astronauts",
           facebook: "",
@@ -216,6 +215,7 @@ const data = [
       {
         name: "Nicole Aunapu",
         link: "https://www.nasa.gov/astronauts/biographies/nicole-a-mann",
+        avatar: "https://www.nasa.gov/sites/default/files/styles/side_image/public/thumbnails/image/12774510894_1f725ae405_o.jpg?itok=Q0ien0Mo",
         social: {
           twitter: "https://twitter.com/AstroDuke",
           facebook: "",
@@ -226,6 +226,7 @@ const data = [
       {
         name: "Chris Ferguson",
         link: "https://www.jsc.nasa.gov/Bios/htmlbios/ferguson.html",
+        avatar: "https://pbs.twimg.com/profile_images/1025222362990440448/cuR4MxMB_400x400.jpg",
         social: {
           twitter: "https://twitter.com/Astro_Ferg?lang=en",
           facebook: "",
