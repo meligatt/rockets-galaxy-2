@@ -1,6 +1,6 @@
 import './index.scss';
 import React from 'react';
-
+// console.log(meli)
 const Footer = () => {
   return (
     <footer className="footer">
