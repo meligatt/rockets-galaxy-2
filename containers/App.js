@@ -26,6 +26,18 @@ class App extends Component {
             <div>
               Hello Rockets of the galaxy Chrome extension!
               <p>
+                <strong>
+                  practicing git commands!
+                  practicing git commands!
+                  practicing git commands!
+                  practicing git commands!
+                  practicing git commands!
+                  practicing git commands!
+                  practicing git commands!
+                  practicing git commands!
+                </strong>
+              </p>
+              <p>
                 Hello Rockets of the galaxy Chrome extension!
               </p>
               <p>
