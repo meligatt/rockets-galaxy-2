@@ -1,6 +1,7 @@
 const data = [
   {
     date: "October 26, 2018",
+    launchDate: "",
     insignia: "https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/iconairglownight.png",
     hasInsignia: false,
     year: "2018",
@@ -13,6 +14,7 @@ const data = [
   },
   {
     date: "November 15, 2018 - 4:49 a.m. Eastern",
+    launchDate: "",
     insignia: "https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/iss053e311637_0.jpg",
     hasInsignia: false,
     year: "2018",
@@ -25,6 +27,7 @@ const data = [
   },
   {
     date: "November 26, 2018",
+    launchDate: "",
     insignia: "https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/edl.png",
     hasInsignia: false,
     year: "2018",
@@ -37,6 +40,7 @@ const data = [
   },
   {
     date: "December 13, 2018",
+    launchDate: "",
     insignia: "https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/iss057-s-001.jpg",
     hasInsignia: true,
     year: "2018",
@@ -79,6 +83,7 @@ const data = [
   },
   {
     date: "December 20, 2018",
+    launchDate: "",
     insignia: "https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/iss058-s-001.jpg",
     hasInsignia: true,
     year: "2018",
@@ -121,6 +126,7 @@ const data = [
   },
   {
     date: "January",
+    launchDate: "",
     insignia: "https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/27874959665_7c03df8f3e_o.jpg",
     hasInsignia: false,
     year: "2019",
@@ -133,6 +139,7 @@ const data = [
   },
   {
     date: "March",
+    launchDate: "",
     insignia: "https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/32352053196_6a799152de_o.jpg",
     hasInsignia: false,
     year: "2019",
@@ -145,6 +152,7 @@ const data = [
   },
   {
     date: "June",
+    launchDate: "",
     insignia: "https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/27874959665_7c03df8f3e_o.jpg",
     hasInsignia: false,
     year: "2019",
@@ -177,6 +185,7 @@ const data = [
   },
   {
     date: "August",
+    launchDate: "",
     insignia: "https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/32352053196_6a799152de_o.jpg",
     hasInsignia: false,
     year: "2019",

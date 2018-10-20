@@ -19,17 +19,23 @@ module.exports = {
     },
   },
   module: {
-    rules:[
-      { test: /\.(js|jsx)$/,
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
-      { test: /\.scss$/,
+      {
+        test: /\.(scss|css)$/,
         loaders: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader',
       }
     ]
   },
-  output:{
+  output: {
     path: parentDir + '/dist',
     filename: 'bundle.js'
   },
@@ -38,7 +44,7 @@ module.exports = {
     historyApiFallback: true
   },
   plugins: [
-    new CleanWebpackPlugin([path.join(__dirname, '../','dist')]),
+    new CleanWebpackPlugin([path.join(__dirname, '../', 'dist')]),
     new HtmlWebpackPlugin({
       title: 'gardians-extension',
       template: path.join(__dirname, '../', 'index.html'),
