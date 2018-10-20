@@ -6,6 +6,16 @@ const WidgetCrewStyled = styled.div`
   padding: 1rem;
   margin: 1rem;
   color: black;
+  flex: 1 1 20em;
+`
+const CrewContainerStyled = styled.div`
+  display: flex;
+  justify-content: space-around;
+`
+const MemberStyled = styled.div`
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
 `
 const WidgetCrew = ({
   crew,
@@ -18,14 +28,18 @@ const WidgetCrew = ({
   return (
     <WidgetCrewStyled>
       <h4>Crew</h4>
-      {
-        crewed && crew.map(item => {
-          return (<div id={item.name} key={item.name} onClick={onClickCrewMember}>
-            <div> {item.name}</div>
-            <img width="100" src={item.avatar} />
-          </div>)
-        })
-      }
+      <CrewContainerStyled>
+        {
+          crewed && crew.map(item => {
+            return (
+              <MemberStyled id={item.name} key={item.name} onClick={onClickCrewMember}>
+                <img height="70" width="auto" src={item.avatar} style={{ boxShadow: '-1px 1px 20px rgba(255, 255, 255, 0.48)' }} />
+                <div>{item.name}</div>
+              </MemberStyled>)
+          })
+        }
+      </CrewContainerStyled>
+
     </WidgetCrewStyled>
   );
 };
