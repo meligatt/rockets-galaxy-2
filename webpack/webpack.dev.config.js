@@ -13,6 +13,11 @@ module.exports = {
     path.join(parentDir, 'index.js')
   ],
   mode: 'development',
+  resolve: {
+    alias: {
+      data: path.resolve(__dirname, '../', 'public/'),
+    },
+  },
   module: {
     rules:[
       { test: /\.(js|jsx)$/,
@@ -45,7 +50,7 @@ module.exports = {
       {
         from: parentDir + 'public',
         to: parentDir + 'dist'
-      }
-    ])
-  ]
+      },
+    ]),
+  ],
 }
