@@ -14,6 +14,7 @@ class App extends Component {
   componentDidMount() {
     console.log("componentDidMount!");
     console.log("peace among worlds!");
+    console.log("another log in componentDidMount!");
   }
 
   render() {
@@ -49,6 +50,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-
