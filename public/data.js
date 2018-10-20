@@ -31,16 +31,27 @@ const data = [
     launchWindow: "",
     mission: "Expedition 57 Landing",
     description: "Astronauts Serena Auñón-Chancellor of NASA, Alexander Gerst of the European Space Agency (ESA), and cosmonaut Sergey Prokopyev of the Russian space agency Roscosmos, will undock their Soyuz spacecraft from the International Space Station and land in Kazakhstan.",
-    crewed: false,
+    crewed: true,
     crew: [
       {
         name: "Commander Alexander Gerst",
         link: "http://alexandergerst.esa.int/",
+        social: {
+          twitter: "https://twitter.com/astro_alex",
+          facebook: "https://www.facebook.com/ESAAlexGerst",
+          flickr: "http://www.flickr.com/photos/astro_alex/",
+          instagram: "https://www.instagram.com/astro_alex_esa/",
+        }
       },
       {
         name: "Serena Auñón-Chancellor",
         link: "https://www.nasa.gov/astronauts/biographies/serena-m-aunon-chancellor",
-        
+        social: {
+          twitter: "https://twitter.com/AstroSerena",
+          facebook: "",
+          flickr: "",
+          instagram: "",
+        },
       },
       {
         name: "Sergey Prokopyev",
@@ -53,7 +64,7 @@ const data = [
     launchWindow: "",
     mission: "Expedition 58 Launch",
     description: "NASA astronaut Anne McClain, Canadian Space Agency astronaut David Saint-Jacques and Oleg Kononenko of the Russian space agency Roscosmos launch to the International Space Station aboard the Russian Soyuz spacecraft from the Baikonur Cosmodrome in Kazakhstan.",
-    crewed: false,
+    crewed: true,
     crew: [
       {
         name: "Oleg Kononenko",
@@ -62,10 +73,22 @@ const data = [
       {
         name: "David Saint-Jacques",
         link: "http://www.asc-csa.gc.ca/eng/astronauts/canadian/active/bio-david-saint-jacques.asp",
+        social: {
+          twitter: "http://twitter.com/Astro_DavidS",
+          facebook: "https://www.facebook.com/AstroDavidS",
+          flickr: "",
+          instagram: "https://www.instagram.com/astrodavids/",
+        },
       },
       {
         name: "Anne McClain",
         link: "https://www.nasa.gov/astronauts/biographies/anne-c-mcclain",
+        social: {
+          twitter: "https://twitter.com/AstroAnnimal",
+          facebook: "",
+          flickr: "",
+          instagram: "",
+        },
       },
     ],
   },
@@ -97,10 +120,22 @@ const data = [
       {
         name: "Bob Behnken",
         link: "https://www.nasa.gov/astronauts/biographies/robert-l-behnken",
+        social: {
+          twitter: "https://twitter.com/AstroBehnken",
+          facebook: "",
+          flickr: "",
+          instagram: "",
+        },
       },
       {
         name: "Doug Hurley",
         link: "https://www.nasa.gov/astronauts/biographies/douglas-g-hurley",
+        social: {
+          twitter: "https://twitter.com/Astro_Doug",
+          facebook: "",
+          flickr: "",
+          instagram: "",
+        },
       },
     ],
   },
@@ -114,14 +149,32 @@ const data = [
       {
         name: "Eric Boe",
         link: "https://www.nasa.gov/astronauts/biographies/eric-a-boe",
+        social: {
+          twitter: "https://twitter.com/NASA_Astronauts",
+          facebook: "",
+          flickr: "",
+          instagram: "",
+        },
       },
       {
         name: "Nicole Aunapu",
         link: "https://www.nasa.gov/astronauts/biographies/nicole-a-mann",
+        social: {
+          twitter: "https://twitter.com/AstroDuke",
+          facebook: "",
+          flickr: "",
+          instagram: "",
+        },
       },
       {
         name: "Chris Ferguson",
         link: "https://www.jsc.nasa.gov/Bios/htmlbios/ferguson.html",
+        social: {
+          twitter: "https://twitter.com/Astro_Ferg?lang=en",
+          facebook: "",
+          flickr: "",
+          instagram: "",
+        },
       },
     ],
   },
