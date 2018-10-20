@@ -39,7 +39,7 @@ class App extends Component {
 
   render() {
     const {
-      date,
+      launchDate,
       launchWindow,
       mission,
       description,
@@ -58,7 +58,7 @@ class App extends Component {
                   description={description} />
                 <WidgetCrew crew={crew} />
                 <WidgetLaunch
-                  date={date}
+                  date={launchDate}
                   launchWindow={launchWindow || 'TBC'} />
               </div>
             }
