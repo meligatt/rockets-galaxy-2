@@ -6,6 +6,7 @@ import Main from './../components/Main/index.jsx';
 import Footer from './../components/Footer/index.jsx';
 import WidgetExpedition from './../components/WidgetExpedition/index.jsx';
 import WidgetCrew from './../components/WidgetCrew/index.jsx';
+import WidgetCrewMember from './../components/WidgetCrewMember/index.jsx';
 import WidgetLaunch from './../components/WidgetLaunch/index.jsx';
 import myData from 'data/data.js';
 import Rocket from './../components/Artwork/Rocket/index.jsx';
@@ -23,28 +24,46 @@ const RocketStyled = styled.div`
 `
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      data: [],
-      isLoading: true
+      data: myData,
+      isLoading: true,
+      missionCounter: 0,
+      randomMission: {},
+      selectedCrewMember: null,
     };
   }
   componentDidMount() {
     this.setState({
-      data: myData[3],
+      randomMission: this.getRandomMission(0, this.state.data.length),
+      missionCounter: myData.length,
       isLoading: false
     });
   }
 
+  getRandomMission = (min, max) => {
+    const mission = Math.round(Math.random() * (max - min) + min);
+    return this.state.data[mission];
+  }
+  onClickCrewMember = (event) => {
+    const name = event.currentTarget.id;
+    this.setState({ selectedCrewMember: name });
+  }
+
   render() {
+    const { isLoading, randomMission, selectedCrewMember } = this.state;
     const {
       launchDate,
+      launchMonth,
+      launchYear,
       launchWindow,
       mission,
       description,
-      crew } = this.state.data;
-    const { isLoading } = this.state;
+      crew,
+      crewed,
+      insignia
+    } = randomMission;
 
     return (
       <AppViewStyled>
@@ -55,14 +74,19 @@ class App extends Component {
               <div className="Widget-area">
                 <WidgetExpedition
                   mission={mission}
-                  description={description} />
-                <WidgetCrew crew={crew} />
+                  description={description}
+                  insignia={insignia} />
                 <WidgetLaunch
-                  date={launchDate}
-                  launchWindow={launchWindow || 'TBC'} />
+                  launchDate={launchDate}
+                  launchMonth={launchMonth}
+                  launchYear={launchYear}
+                  launchWindow={launchWindow || 'TBD'} />
+                <WidgetCrew crew={crew} crewed={crewed} onClickCrewMember={this.onClickCrewMember} />
+
+                {selectedCrewMember && <WidgetCrewMember data={randomMission.crew.filter(item => item.name === selectedCrewMember)} />}
               </div>
             }
-            <RocketStyled><Rocket /></RocketStyled>
+            {/* <RocketStyled><Rocket /></RocketStyled> */}
           </Main>
 
         </AppViewContainerStyled>
