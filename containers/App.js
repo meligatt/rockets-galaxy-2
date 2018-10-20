@@ -13,6 +13,7 @@ class App extends Component {
   }
   componentDidMount() {
     console.log("componentDidMount!");
+    console.log("peace among worlds!");
   }
 
   render() {
