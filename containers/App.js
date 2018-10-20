@@ -5,6 +5,7 @@ import Main from './../components/Main/index.jsx';
 import Footer from './../components/Footer/index.jsx';
 import WidgetExpedition from './../components/WidgetExpedition/index.jsx';
 import WidgetCrew from './../components/WidgetCrew/index.jsx';
+import WidgetLaunch from './../components/WidgetLaunch/index.jsx';
 import myData from 'data/data.js';
 
 class App extends Component {
@@ -23,20 +24,29 @@ class App extends Component {
   }
 
   render() {
-    const { mission, description, crew } = this.state.data;
+    const {
+      date,
+      launchWindow,
+      mission,
+      description,
+      crew } = this.state.data;
     const { isLoading } = this.state;
-    console.log(this.state.data);
 
     return (
       <div className="app-view">
         <div className="app-view__container">
           <Nav />
           <Main>
-            <WidgetExpedition
-              mission={mission}
-              description={description} />
-            {
-              !isLoading && <WidgetCrew crew={crew} />
+            {!isLoading &&
+              <div className="Widget-area">
+                <WidgetExpedition
+                  mission={mission}
+                  description={description} />
+                <WidgetCrew crew={crew} />
+                <WidgetLaunch
+                  date={date}
+                  launchWindow={launchWindow || 'TBC'} />
+              </div>
             }
           </Main>
         </div>
