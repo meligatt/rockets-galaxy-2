@@ -1,29 +1,53 @@
+import './index.scss';
 import React, { Component } from 'react';
+import Nav from './../components/Nav/index.jsx';
+import Main from './../components/Main/index.jsx';
+import Footer from './../components/Footer/index.jsx';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      films: [],
-      loading: true,
-      results: []
+      data: [],
     };
   }
   componentDidMount() {
-
+    console.log("componentDidMount!");
   }
+
   render() {
     return (
-      <div style={{ width: '100%', padding: '1rem', backgroundColor: 'red' }}>
-        <h1>Test Space Apps 2018! ... yay!</h1>
-        <p>lorem  ipsum</p>
-        <p>lorem  ipsum</p>
-        <p>lorem  ipsum</p>
-        <p>lorem  ipsum</p>
-        <p>lorem  ipsum</p>
+      <div className="app-view">
+        <div className="app-view__container">
+          <Nav />
+          <Main>
+            <div>
+              Hello Rockets of the galaxy Chrome extension!
+              <p>
+                Hello Rockets of the galaxy Chrome extension!
+              </p>
+              <p>
+                Hello Rockets of the galaxy Chrome extension!
+              </p>
+              <p>
+                Hello Rockets of the galaxy Chrome extension!
+              </p>
+              <p>
+                Hello Rockets of the galaxy Chrome extension!
+              </p>
+              <p>
+                Hello Rockets of the galaxy Chrome extension!
+              </p>
+            </div>
+          </Main>
+        </div>
+        <Footer />
       </div>
     );
   }
 }
 
 export default App;
+
+
+

@@ -1,0 +1,25 @@
+// @import 'src/styles/abstracts/functions/_get-color';
+.footer {
+  .footer__container {
+    height: 70px;
+    bottom: 0;
+    border-top: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer__author {
+    display: flex;
+    font-size: 0.8rem;
+    align-items: center;
+    color: white;
+    flex: 0 1 auto;
+  }
+  .footer__link-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .footer__list-item {
+    margin: 1rem;
+  }
+}
