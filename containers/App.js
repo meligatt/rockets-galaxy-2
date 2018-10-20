@@ -23,28 +23,40 @@ const RocketStyled = styled.div`
 `
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      data: [],
-      isLoading: true
+      data: myData,
+      isLoading: true,
+      missionCounter: 0,
+      randomMission: {}
     };
   }
   componentDidMount() {
     this.setState({
-      data: myData[3],
+      randomMission: this.getRandomMission(0, this.state.data.length),
+      missionCounter: myData.length,
       isLoading: false
     });
   }
 
+  getRandomMission = (min, max) => {
+    const mission = Math.round(Math.random() * (max - min) + min);
+    return this.state.data[mission];
+  }
+
   render() {
+    const { isLoading, randomMission } = this.state;
     const {
       launchDate,
+      launchMonth,
+      launchYear,
       launchWindow,
       mission,
       description,
-      crew } = this.state.data;
-    const { isLoading } = this.state;
+      crew
+    } = randomMission;
+
 
     return (
       <AppViewStyled>
@@ -58,8 +70,10 @@ class App extends Component {
                   description={description} />
                 <WidgetCrew crew={crew} />
                 <WidgetLaunch
-                  date={launchDate}
-                  launchWindow={launchWindow || 'TBC'} />
+                  launchDate={launchDate}
+                  launchMonth={launchMonth}
+                  launchYear={launchYear}
+                  launchWindow={launchWindow || 'TBD'} />
               </div>
             }
             <RocketStyled><Rocket /></RocketStyled>
