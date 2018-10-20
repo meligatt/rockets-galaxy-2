@@ -2,6 +2,7 @@ import './index.scss';
 import React from 'react';
 // console dani
 // console.log(meli)
+// console.log dani 2
 const Nav = () => {
   return (
     <nav className="main-nav">
