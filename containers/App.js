@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Nav from './../components/Nav/index.jsx';
 import Main from './../components/Main/index.jsx';
 import Footer from './../components/Footer/index.jsx';
+import myData from 'data/data.js';
 
 class App extends Component {
   constructor() {
@@ -15,6 +16,7 @@ class App extends Component {
     console.log("componentDidMount!");
     console.log("peace among worlds!");
     console.log("another log in componentDidMount!");
+    console.log('myData: ', myData);
   }
 
   render() {
