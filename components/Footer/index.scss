@@ -3,9 +3,9 @@
   .footer__container {
     height: 70px;
     bottom: 0;
-    border-top: 1px solid rgba($color: #ffffff, $alpha: 0.2);
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    align-items: center;
   }
   .footer__author {
     display: flex;
@@ -18,8 +18,9 @@
     margin: 0;
     padding: 0;
     display: flex;
+    list-style: none;
   }
   .footer__list-item {
-    margin: 1rem;
+    margin: 0.5rem;
   }
 }
