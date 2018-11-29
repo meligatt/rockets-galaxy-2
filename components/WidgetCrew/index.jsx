@@ -2,21 +2,40 @@ import React from 'react';
 import styled from 'styled-components';
 
 const WidgetCrewStyled = styled.div`
-  border: 1px solid white;
-  padding: 1rem;
-  margin: 1rem;
+  grid-column: 5 / 11;
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  border: ${props => props.theme.borderSmall};
+  padding: ${(props) => props.theme.gutter};
   color: black;
-  flex: 1 1 20em;
+  background-color: none;
 `
 const CrewContainerStyled = styled.div`
   display: flex;
   justify-content: space-around;
 `
 const MemberStyled = styled.div`
-  margin: 0 auto;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  min-width: 50px;
+  min-height: 70px;
+  background-color: ${props => props.theme.defaultBackground};
+  padding: ${(props) => props.theme.gutter};
 `
+
+const HeadingStyled = styled.h4`
+  color: #fff;
+  font-family: ${props => props.theme.primaryFont};
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+`
+
 const WidgetCrew = ({
   crew,
   crewed,
@@ -27,7 +46,8 @@ const WidgetCrew = ({
   }
   return (
     <WidgetCrewStyled>
-      <h4>Crew</h4>
+      <HeadingStyled>Crew</HeadingStyled>
+
       <CrewContainerStyled>
         {
           crewed && crew.map(item => {

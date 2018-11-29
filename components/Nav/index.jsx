@@ -1,15 +1,37 @@
 import './index.scss';
 import React from 'react';
-// console dani
-// console.log(meli)
-// console.log dani 2
+import styled from 'styled-components';
+
+const NavStyled = styled.nav`
+  grid-column: 1 / -1;
+  grid-row: 1;
+  font-family: ${props => props.theme.primaryFont};
+`
+
+const NavContainerStyled = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 90px;
+`
+
+const NavLogoStyled = styled.a`
+  display: flex;
+  font-size: 2rem;
+  font-weight: normal;
+  color: white;
+  text-decoration: none;
+  padding: ${props => props.theme.gutter};
+`
+
 const Nav = () => {
   return (
-    <nav className="main-nav">
-      <div className="main-nav__container">
-        <a className="main-nav__logo" href="/">
-          Rockets of the galaxy
-        </a>
+    <NavStyled>
+      <NavContainerStyled>
+        <NavLogoStyled>
+          Rockets of the Galaxy
+        </NavLogoStyled>
         {/* <ul className="main-nav__menu">
           <li className="main-nav__item">
             link 1
@@ -18,8 +40,8 @@ const Nav = () => {
             link 2
           </li>
         </ul> */}
-      </div>
-    </nav>
+      </NavContainerStyled>
+    </NavStyled>
   );
 };
 

@@ -1,10 +1,18 @@
 import './index.scss';
 import React from 'react';
-// console dani
-// console.log(meli)
+import styled from 'styled-components';
+
+const FooterStyled = styled.footer`
+  grid-column: 3 / -3;
+  grid-row: 5 / 7;
+  padding: ${props => props.theme.gutter};
+  background-color: ${props => props.theme.defaultBackground};
+  border: ${props => props.theme.borderSmall};
+`
+
 const Footer = () => {
   return (
-    <footer className="footer">
+    <FooterStyled className="footer">
       <div className="footer__container">
         <div className="footer__author">
           <span>NASA Space Apps hackathon 2018</span>
@@ -21,7 +29,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-    </footer>
+    </FooterStyled>
   );
 };
 
