@@ -2,23 +2,28 @@ import React from 'react';
 import styled from 'styled-components';
 
 const WidgetExpeditionStyled = styled.div`
-  border: 1px solid white;
-  padding: 1rem;
-  margin: 1rem;
+  grid-row: 2;
+  grid-column: 4 / -3;
+  border: ${props => props.theme.borderSmall};
+  padding: ${(props) => props.theme.gutter};
   color: black;
-  flex: 1 1 20em;  
 `
+const HeadingStyled = styled.h4`
+  color: #fff;
+  font-family: ${props => props.theme.primaryFont};
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+`
+
 const WidgetExpedition = ({
   mission,
-  description,
-  insignia
+  description
 }) => {
   return (
     <WidgetExpeditionStyled>
-      <h4>Expedition</h4>
-      <div>Mission: {mission}</div>
+      <HeadingStyled>Expedition</HeadingStyled>
+      <h2>Mission: {mission}</h2>
       <div>Description: {description}</div>
-      <div> <img width="100" src={insignia} /> </div>
     </WidgetExpeditionStyled>
   );
 };

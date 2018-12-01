@@ -2,12 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 
 const WidgetlaunchStyled = styled.div`
-  border: 1px solid white;
-  padding: 1rem;
-  margin: 1rem;
+  grid-row: 3;
+  grid-column: 3 / 5;
+  border: ${props => props.theme.borderSmall};
+  padding: ${(props) => props.theme.gutter};
   color: black;
-  flex: 1 1 20em;
+  background-color: ${props => props.theme.defaultBackground};
 `
+const HeadingStyled = styled.h4`
+  color: #fff;
+  font-family: ${props => props.theme.primaryFont};
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+`
+
 const WidgetLaunch = ({
   launchDate,
   launchMonth,
@@ -16,7 +24,7 @@ const WidgetLaunch = ({
 }) => {
   return (
     <WidgetlaunchStyled>
-      <h4>Launch</h4>
+      <HeadingStyled>Launch</HeadingStyled>
       <div>date: {launchDate}</div>
       <div>Month: {launchMonth}</div>
       <div>Year: {launchYear}</div>
