@@ -19,6 +19,11 @@
     "48": "logo-rocket.png",
     "128": "logo-rocket.png"
   },
+  "permissions": [
+    "browser",
+    "tabs",
+    "activeTab"
+  ],
   "chrome_url_overrides": {
     "newtab": "index.html"
   }

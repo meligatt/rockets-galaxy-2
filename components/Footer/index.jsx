@@ -9,6 +9,28 @@ const FooterStyled = styled.footer`
   background-color: ${props => props.theme.defaultBackground};
   border: ${props => props.theme.borderSmall};
 `
+const onButtonClick = () => {
+  chrome.tabs.create({ url: 'http://www.google.com' }, () => {
+    console.log('chrome.tabs.create!')
+  });
+}
+
+const onButtonLoadClick = () => {
+  chrome.runtime.reload();
+}
+
+const onMessageClick = () => {
+  // https://developer.chrome.com/extensions/runtime#method-sendMessage
+  // chrome.runtime.sendMessage(string extensionId, any message, object options, function responseCallback)
+  console.log('onMessageClick');
+  chrome.runtime.sendMessage({ greeting: "ping" }, (res) => {
+    console.log('response: ', res.farewell);
+  })
+  // chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
+  //   console.log(response.farewell);
+  // });
+
+}
 
 const Footer = () => {
   return (
@@ -27,6 +49,9 @@ const Footer = () => {
           <li className="footer__list-item">
             <a href="https://twitter.com/meligatt" rel='noopener noreferrer' target="_blank">Melissa G.</a>
           </li>
+          <li><button onClick={onButtonClick}>open tab</button></li>
+          <li><button onClick={onButtonLoadClick}>reload page</button></li>
+          <li><button onClick={onMessageClick}>send message </button></li>
         </ul>
       </div>
     </FooterStyled>
