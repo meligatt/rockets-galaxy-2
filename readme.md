@@ -1,4 +1,4 @@
-## author:
+## Author:
 Team Wangalen: https://2018.spaceappschallenge.org/challenges/can-you-build/when-next-rocket-launch/teams/wangalen/stream
 
 ## credits:
