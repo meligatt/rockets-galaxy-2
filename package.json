@@ -4,10 +4,11 @@
   "description": "rockets of the galaxy",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "yarn run-s build:prod",
+    "start": "yarn run-s build:prod serve",
     "start:dev": "yarn run-s build:dev",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.common.js",
-    "build:dev": "cross-env NODE_ENV=development webpack --watch --config webpack.common.js"
+    "build:dev": "cross-env NODE_ENV=development webpack --watch --config webpack.common.js",
+    "serve": "node ./server.js"
   },
   "author": "melissa gattoni",
   "license": "ISC",
@@ -33,6 +34,7 @@
     "cheerio": "^1.0.0-rc.2",
     "cross-env": "^5.2.0",
     "eslint-config-airbnb": "^17.1.0",
+    "express": "^4.16.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "fannypack": "^2.13.2",
     "react": "^16.4.2",
