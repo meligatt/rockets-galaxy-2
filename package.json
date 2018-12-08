@@ -1,12 +1,14 @@
 {
   "name": "rockets-galaxy",
   "version": "1.0.0",
-  "description": "game using react components ",
-  "main": "index.js",
+  "description": "rockets of the galaxy",
+  "main": "webpack.config.js",
   "scripts": {
+    "start": "yarn run-s build:production",
+    "start:dev": "yarn run-s build:dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.dev.config.js",
-    "build": "webpack --config ./webpack/webpack.dev.config.js --mode=production"
+    "build:production": "cross-env NODE_ENV=production webpack",
+    "build:dev": "cross-env NODE_ENV=development webpack"
   },
   "author": "melissa gattoni",
   "license": "ISC",
@@ -28,13 +30,19 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
     "cheerio": "^1.0.0-rc.2",
+    "cross-env": "^5.2.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "fannypack": "^2.13.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "styled-components": "^4.0.2",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.16.5",
-    "webpack-dev-server": "^3.1.5"
+    "webpack-dev-server": "^3.1.5",
+    "webpack-merge": "^4.1.4",
+    "yarn-run-all": "^3.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

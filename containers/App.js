@@ -1,8 +1,9 @@
-import 'data/reset.css';
+// import 'data/reset.css';
+import myData from 'data/data.js';
+
 import React, { Component, Fragment } from 'react';
 import { Box, styled } from 'fannypack';
 import Nav from './../components/Nav/index.jsx';
-import Main from './../components/Main/index.jsx';
 import Footer from './../components/Footer/index.jsx';
 import WidgetExpedition from './../components/WidgetExpedition/index.jsx';
 import WidgetInsignia from './../components/WidgetInsignia/WidgetInsignia.jsx';
@@ -10,8 +11,7 @@ import WidgetCrew from './../components/WidgetCrew/index.jsx';
 import WidgetCrewMember from './../components/WidgetCrewMember/index.jsx';
 import WidgetLaunch from './../components/WidgetLaunch/index.jsx';
 import WidgetTimeline from './../components/WidgetTimeline/index.jsx';
-import myData from 'data/data.js';
-import Rocket from './../components/Artwork/Rocket/index.jsx';
+
 
 const GridContainerStyled = styled(Box)`
   display: grid;
@@ -107,7 +107,7 @@ class App extends Component {
                   />
                 )
               }
-              <WidgetTimeline data={data} currentRandomMission={randomMission} /> 
+              <WidgetTimeline data={data} currentRandomMission={randomMission} />
               {/* <RocketStyled><Rocket /></RocketStyled> */}
             </Fragment>
           )
