@@ -1,4 +1,4 @@
-const data = [{
+export default [{
   launchMonth: "October",
   launchYear: "2018",
   timezone: "Eastern",
@@ -236,6 +236,4 @@ const data = [{
   },
   ],
 },
-]
-
-export default data;
+];

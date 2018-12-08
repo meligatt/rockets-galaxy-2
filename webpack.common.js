@@ -7,19 +7,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
 const configs = {
-  development: require('./webpack/development.js'),
-  staging: require('./webpack/staging.js'),
-  production: require('./webpack/production.js')
+  development: require('./webpack.dev.js'),
+  production: require('./webpack.prod.js')
 };
 
 const ENV = process.env.NODE_ENV;
 
 const commonConfig = {
+  entry: {
+    app: './src/index.js'
+  },
   mode: ENV,
   context: path.join(__dirname, '/'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
@@ -60,14 +62,12 @@ const commonConfig = {
     extensions: ['.js', '.jsx', '.css']
   },
 };
-console.log(ENV);
+
 
 const environmentConfig = (() => {
   switch (ENV) {
     case 'production':
       return configs.production;
-    case 'staging':
-      return configs.staging;
     case 'development':
     default:
       return configs.development;

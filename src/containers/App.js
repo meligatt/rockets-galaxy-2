@@ -1,6 +1,5 @@
-// import 'data/reset.css';
-import myData from 'data/data.js';
 
+import myData from './data.js';
 import React, { Component, Fragment } from 'react';
 import { Box, styled } from 'fannypack';
 import Nav from './../components/Nav/index.jsx';
@@ -11,6 +10,7 @@ import WidgetCrew from './../components/WidgetCrew/index.jsx';
 import WidgetCrewMember from './../components/WidgetCrewMember/index.jsx';
 import WidgetLaunch from './../components/WidgetLaunch/index.jsx';
 import WidgetTimeline from './../components/WidgetTimeline/index.jsx';
+import { toUnicode } from 'punycode';
 
 
 const GridContainerStyled = styled(Box)`
