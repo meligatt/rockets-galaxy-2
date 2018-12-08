@@ -9,7 +9,7 @@
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.common.js",
     "build:dev": "cross-env NODE_ENV=development webpack --watch --config webpack.common.js",
     "serve": "node ./server.js",
-    "postinstall": "yarn run-s build:prod serve",
+    "postinstall": "yarn run-s build:prod serve"
   },
   "author": "melissa gattoni",
   "license": "ISC",
