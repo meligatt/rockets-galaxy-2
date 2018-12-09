@@ -19,6 +19,7 @@ const onButtonLoadClick = () => {
   chrome.runtime.reload();
 }
 
+// TODO: later work with some background scripts to open tabs, etc...
 const onMessageClick = () => {
   // https://developer.chrome.com/extensions/runtime#method-sendMessage
   // chrome.runtime.sendMessage(string extensionId, any message, object options, function responseCallback)
@@ -29,7 +30,6 @@ const onMessageClick = () => {
   // chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
   //   console.log(response.farewell);
   // });
-
 }
 
 const Footer = () => {
@@ -49,9 +49,6 @@ const Footer = () => {
           <li className="footer__list-item">
             <a href="https://twitter.com/meligatt" rel='noopener noreferrer' target="_blank">Melissa G.</a>
           </li>
-          <li><button onClick={onButtonClick}>open tab</button></li>
-          <li><button onClick={onButtonLoadClick}>reload page</button></li>
-          <li><button onClick={onMessageClick}>send message </button></li>
         </ul>
       </div>
     </FooterStyled>
